@@ -243,7 +243,7 @@
         /* Pricing */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
             gap: 30px;
         }
 
@@ -362,13 +362,18 @@
         }
 
         .contact-details h4 {
-            font-size: 1.05rem;
-            margin-bottom: 4px;
+            min-width: 0;
         }
 
         .contact-details p {
             color: var(--text-muted);
             font-size: 0.98rem;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-details h4 {
+            font-size: 1.05rem;
+            margin-bottom: 4px;
         }
 
         /* Policy Card */
